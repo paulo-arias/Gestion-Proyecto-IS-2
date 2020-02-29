@@ -10,3 +10,7 @@ CREATE DATABASE is2_gestion
     LC_CTYPE = 'Spanish_Paraguay.1252'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
+    
+    O si no creen desde acá : https://www.guru99.com/postgresql-create-database.html
+    
+    Acá hay un tutorial para instalar y empezar con postgres: https://www.postgresqltutorial.com/
