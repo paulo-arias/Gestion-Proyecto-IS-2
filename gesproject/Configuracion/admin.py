@@ -6,3 +6,4 @@ from .models import Configuracion
 # Se crea una clase que extienda del admin.ModelAdmin
 class ConfigAdmin(admin.ModelAdmin):
     list_display = (id,'nombre','apellido')
+
