@@ -12,7 +12,3 @@ La carpeta ambiente contiene el ambiente virtual en donde se desarrolla el proye
 La carpeta gesproject es la carpeta del proyecto. Contiene el archivo settings.py donde se vincula con la base de datos.
 OBS: Ejecutar "pip install -r requirements.txt"
 Sitio de inicio: http://127.0.0.1:8000/admin/
-
-En su estado actual el proyecto permite el login de un usuario, mostrado el viernes 6/3
-
-Entrega 15-3
