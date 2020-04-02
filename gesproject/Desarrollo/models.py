@@ -4,7 +4,17 @@ from django.db import models
 class Tarea(models.Model):
     version = models.CharField(max_length=255)
     prioridad = models.CharField(max_length=255)
-    estado = models.CharField(max_length=255) # las opciones son [iniciado, pendiente, finalizado]
+
+    estados_tarea = (
+        ('i', 'Iniciado'),
+        ('p', 'Pendiente'),
+        ('f', 'Finalizado')
+    )
+
+    #estado = models.CharField(max_length=255) # las opciones son [iniciado, pendiente, finalizado]
+
+    estado = models.CharField(max_length=1, choices=estados_tarea, blank=True, default='p', help_text='Estados de la Tarea')
+
     descripcion = models.CharField(max_length=255)
     observacion = models.CharField(max_length=255)
     #id_tarea_padre = models.CharField(max_length=255) # Se estara viendo con la base de datos
