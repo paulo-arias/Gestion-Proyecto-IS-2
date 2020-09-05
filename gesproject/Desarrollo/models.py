@@ -22,8 +22,8 @@ class Tarea(models.Model):
 
     estado = models.CharField(max_length=1, choices=estados_tarea, blank=True, default='p', help_text='Estados de la Tarea')
 
-    descripcion = models.CharField(max_length=255)
-    observacion = models.CharField(max_length=255)
+    descripcion = models.CharField(max_length=255, null=True, blank=True)
+    observacion = models.CharField(max_length=255, null=True, blank=True)
 
     #fecha creacion? fecha_Creacion = models.Datefield()
 
@@ -35,3 +35,19 @@ class Tarea(models.Model):
 
     #proyecto
     proyecto = models.ForeignKey('Proyecto', null=True, blank=True, help_text='Proyecto al que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
+
+    #linea base
+    linea_base = models.ForeignKey('LineaBase', null=True, blank=True, help_text='Linea Base a la que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
+
+
+class LineaBase(models.Model):
+    Codigo = models.Integerfield(primary_key=True)  # si le quiero poner
+    Nombre = models.CharField(max_length=255)
+
+    estados_lb = (
+        ('i', 'Iniciado'),
+        ('p', 'Pendiente'),
+        ('f', 'Finalizado')
+    )
+
+    Estado = models.CharField(max_length=1, choices=estados_lb, blank=True, default='p', help_text='Estados de la Tarea')
