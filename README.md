@@ -1,5 +1,5 @@
 # Gestion-Proyecto-IS-2
-Gestión Proyecto Ing. Software II - Grupo 9
+Gestión Proyecto Ing. Software II - Grupo 4
 
     Integrantes 
     - Paulo Javier Arias Vergara
@@ -11,4 +11,4 @@ La carpeta ambiente contiene el ambiente virtual en donde se desarrolla el proye
 
 La carpeta gesproject es la carpeta del proyecto. Contiene el archivo settings.py donde se vincula con la base de datos.
 OBS: Ejecutar "pip install -r requirements.txt"
-Sitio de inicio: http://127.0.0.1:8000/admin/
+Sitio de inicio: http://127.0.0.1:8000 
