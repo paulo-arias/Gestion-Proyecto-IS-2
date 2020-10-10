@@ -1,5 +1,6 @@
 from django.db import models
 
+from Configuracion.models import LineaBase
 
 class Proyecto(models.Model):
     Nombre = models.CharField(max_length=255)
@@ -32,14 +33,11 @@ class Tarea(models.Model):
     #id_tarea_padre
     tarea_padre = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL) #, on_delete=models.CASCADE
 
-    #one to one
-    #tarea_padre = models.OneToOneField('self', null=True, blank=True)  # , on_delete=models.CASCADE
-
     #proyecto
     proyecto = models.ForeignKey('Proyecto', null=True, blank=True, help_text='Proyecto al que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
 
-    #linea base
-    #linea_base = models.ForeignKey('Configuracion.LineaBase', null=True, blank=True, help_text='Linea Base a la que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
+    linea base
+    linea_base = models.ForeignKey('Configuracion.LineaBase', null=True, blank=True, help_text='Linea Base a la que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
 
 
     def __str__(self):
