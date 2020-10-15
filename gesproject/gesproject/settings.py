@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'gesproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'is2db',
+        'NAME': 'is2_gestion_prueba_ver2',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'nelmal97',
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
 TIME_ZONE = 'UTC'
 
