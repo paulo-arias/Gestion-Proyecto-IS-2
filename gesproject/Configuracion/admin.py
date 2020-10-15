@@ -10,7 +10,7 @@ class ConfigAdmin(admin.ModelAdmin):
     list_display = (id,'nombre','apellido')
 
 
-class BookInline(admin.TabularInline):
+class TareaInline(admin.TabularInline):
     model = Tarea #tarea.estado?
     fields = ('version', 'estado', 'descripcion')
     readonly_fields = ('version', 'estado', 'descripcion')
@@ -18,7 +18,7 @@ class BookInline(admin.TabularInline):
 @admin.register(LineaBase)
 class LineaBaseAdmin(admin.ModelAdmin):
     list_display = ('Codigo', 'Nombre', 'Estado') #(id, 'Nombre', 'Estado')
-    inlines = [BookInline,]
+    inlines = [TareaInline,]
 
 
 
