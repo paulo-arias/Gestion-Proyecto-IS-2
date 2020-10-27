@@ -14,6 +14,8 @@ class BookInline(admin.TabularInline):
     model = Tarea #tarea.estado?
     fields = ('version', 'estado', 'descripcion')
     readonly_fields = ('version', 'estado', 'descripcion')
+    can_delete = False
+
 
 @admin.register(LineaBase)
 class LineaBaseAdmin(admin.ModelAdmin):
