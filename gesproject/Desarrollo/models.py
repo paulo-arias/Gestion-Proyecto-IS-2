@@ -41,8 +41,8 @@ class Tarea(models.Model):
     #linea base
     linea_base = models.ForeignKey(LineaBase, null=True, blank=True, help_text='Linea Base a la que pertence', on_delete=models.SET_NULL)  # , on_delete=models.CASCADE
 
-
-
+    def __str__(self):
+        return 'Tarea:  %s' % (self.descripcion)
 
 
 

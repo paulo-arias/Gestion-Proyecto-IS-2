@@ -18,3 +18,6 @@ class LineaBase(models.Model):
     )
 
     Estado = models.CharField(max_length=1, choices=estados_lb, blank=True, default='p', help_text='Estados de la Tarea')
+
+    def __str__(self):
+        return self.Nombre

@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'gesproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'is2_gestion_prueba_ver2',
+        'NAME': 'is2db',
         'USER': 'postgres',
-        'PASSWORD': 'nelmal97',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': 5432,
     }
