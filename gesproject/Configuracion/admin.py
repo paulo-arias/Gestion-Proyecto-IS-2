@@ -10,10 +10,10 @@ class ConfigAdmin(admin.ModelAdmin):
     list_display = (id,'nombre','apellido')
 
 
-class TareaInline(admin.TabularInline):
+class TareaInline(admin.StackedInline):
     model = Tarea #tarea.estado?
     fields = ('version', 'estado', 'descripcion')
-    readonly_fields = ('version', 'estado', 'descripcion')
+    #readonly_fields = ('version', 'estado', 'descripcion')
     can_delete = False
 
 
