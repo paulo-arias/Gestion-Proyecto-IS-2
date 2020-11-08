@@ -6,6 +6,9 @@ from Configuracion.models import LineaBase
 class Proyecto(models.Model):
     Nombre = models.CharField(max_length=255)
     Estado = models.CharField(max_length=255)
+		
+    def __str__(self):
+        return 'Proyecto:  %s' % (self.Nombre)
 
 
 class Tarea(models.Model):
